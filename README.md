@@ -1,14 +1,1 @@
-Client-Server Application in C (IPC with FIFOs, Pipes, and Sockets)
-
-This project implements a client-server application in C that uses FIFOs, pipes, and socketpairs for inter-process communication.
-The server supports commands such as:
-
-- login <username> <password> – authenticate user
-
-- get-logged-users – list currently logged-in system users
-
-- get-proc-info <PID> – show process information from /proc/[PID]/status
-
-- logout – log out the current user
-
-- quit – terminate session
+Multithreaded server for any number of clients. Clients answer questions one at a time, in the order they registered. Each client has N seconds to respond. The server checks the answers and updates the scores. It synchronizes the clients, giving each the allocated N seconds. Communication is done via sockets, and the questions are stored in SQLite.
